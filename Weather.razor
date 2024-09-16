@@ -1,0 +1,26 @@
+﻿@page "/weather"
+@attribute [StreamRendering]
+
+<PageTitle>Weather</PageTitle>
+
+@page "/calculator"
+@inherits LayoutComponentBase
+
+<h3>Calculadora</h3>
+
+<input @bind="Input1" placeholder="Número 1" />
+<input @bind="Input2" placeholder="Número 2" />
+<button @onclick="Calculate">Calcular</button>
+<p>Resultado: @Result</p>
+
+@code {
+    private double Input1 { get; set; }
+    private double Input2 { get; set; }
+    private double Result { get; set; }
+
+    private void Calculate()
+    {
+        Result = Input1 + Input2;
+    }
+}
+}

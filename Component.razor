@@ -1,0 +1,28 @@
+﻿<h3>Component</h3>
+
+@code {
+
+}
+@page "/aprendemas"
+
+<h3>Aprende Más</h3>
+
+<p>
+    ¡Bienvenido al componente AprendeMás! Aquí puedes agregar contenido adicional.
+</p>
+
+<button @onclick="MostrarMensaje">Haz clic aquí</button>
+
+@if (mostrar)
+{
+    <p>¡Gracias por hacer clic!</p>
+}
+
+@code {
+    private bool mostrar = false;
+
+    private void MostrarMensaje()
+    {
+        mostrar = true;
+    }
+}
